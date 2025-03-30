@@ -44,19 +44,21 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                    switch (activation_Server_Option){
 
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return EXIT_SUCCESS;
+                            break;
 
-
-
+                            }
 
             break;
 
@@ -66,17 +68,22 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
 
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+         switch (activation_Server_Option){
 
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;
+
+                            }
 
             break;
 
@@ -86,17 +93,21 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                    switch (activation_Server_Option){
 
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;
 
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                            }
 
 
             break;
@@ -107,18 +118,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                 switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
             break;
 
@@ -128,18 +140,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                  switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
             break;
 
@@ -149,16 +162,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+               switch (activation_Server_Option){
 
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
             break;
 
             case 7:
@@ -167,19 +183,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                 switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
             break;
 
             case 8:
@@ -188,18 +204,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                  switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
 
             break;
@@ -210,18 +227,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                 switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
             break;
 
             case 10:
@@ -230,17 +248,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                  switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
 
             break;
@@ -251,18 +271,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                cin>>activation_Server_Option;
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                  switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
 
 
@@ -275,18 +296,19 @@ int main()
 
                 activation_Server_Option = getActivationServerOption();
 
-                switch (activation_Server_Option){
-            case 1:
-                terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
-                break;
-                case 2:
-                    terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
-                break;
-                }
+                  switch (activation_Server_Option){
 
-
-                activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
-
+                    case 1:
+                        terminal_comand_skms = "slmgr /skms kms.digiboy.ir" ;
+                         activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 2:
+                            terminal_comand_skms = "slmgr /skms kms.msguides.com" ;
+                             activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
+                        break;
+                        case 3:
+                            return 0;
+                            break;}
 
             break;
 

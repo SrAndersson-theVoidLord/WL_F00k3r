@@ -1,7 +1,7 @@
 #ifndef FUNCTIONS_H_INCLUDED
 #define FUNCTIONS_H_INCLUDED
 
-///[LNG 2023-06-11] -Defines arrow keys:
+/// [LNG 2023-06-11] - Defines arrow keys:
 
 #define Color_Red 12
 #define Color_Def 15
@@ -17,117 +17,68 @@
 #define KEY_ESC 27
 #define Max_Chars 12
 
+#include <iostream>
+#include <windows.h>
+#include <conio.h>
+using namespace std;
 
-COORD coord = {0,0};
+COORD coord = {0, 0};
 char KEY_PAD;
 
 struct Article_Struct *Pointer_Articles[100];
 
-void gotoxy(int x,int y);
-void Show_Title (void);
-int Wait_Option (void);
-int New_Product (void);
-int Delete_Product (void);
-int Buy_Product (void);
-int Sell_Product (void);
-int Report_Product (void);
-int Get_Elements_Number (void);
-void Init_Structure_Elements (int Article);
-int Save_File (void);
-int Load_File (void);
-void Show_Error (char *Pointer_String, int Show_Delay_us);
+void gotoxy(int x, int y);
+void Show_Title(void);
+void Show_Options();
+void Show_Menu();
+void Highlight_Option(int Cursor_Pos);
+void Clear_Highlight(int Prev_Cursor_Pos);
+int Handle_Input(int &Cursor_Pos, int &Prev_Cursor_Pos, int Max_Cursor_Pos);
+int Wait_Option(void);
+void activation_Via_KMS(string key, string comand_kms, string ato);
+int getActivationServerOption(void);
 
 int Counter_Articles = 0;
-char File_Name [Max_Chars];
+char File_Name[Max_Chars];
 float Total_Inventary = 0;
 
-
-
-
-/********************************************************************
-*  [LNG 2023-06-11]     Function:  gotoxy                           *
-* Input Arguments:                                                  *
-*- Integers: Coordenates X and Y in screen.                         *
-* Output Arguments:                                                 *
-* -----------------                                                 *
-* This function move the cursor to an specific coordenates.         *
-********************************************************************/
-void gotoxy(int x,int y)
-{
-    coord.X=x;
-    coord.Y=y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
+// Moves the cursor to specific coordinates
+void gotoxy(int x, int y) {
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-/********************************************************************
-*   [LNG 2023-06-11]   Function: Select_Option                      *
-*        This function only present de program to the user.         *
-********************************************************************/
-void Show_Title (void)
-{
-    int X = 0;
-    int Y = 0;
-
+// Displays the program title
+void Show_Title(void) {
     system("cls");
 
     char Line1[] = {"  ----------------------------------------------------------------------------   "};
-    char Line2[] = {" |                          INVENTORY SYSTEM V.3.0                            |  "};
+    char Line2[] = {" |                          Wlfooker SYSTEM V.3.0                            |  "};
     char Line3[] = {" |                                                                            |  "};
     char Line4[] = {" |                         grecolucas477@yahoo.com.ar                         |  "};
     char Line5[] = {" |                                                                            |  "};
     char Line6[] = {"  ----------------------------------------------------------------------------   "};
 
-
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Green);
-    gotoxy (X,Y+2);
-    for (unsigned int i= 0; i < sizeof(Line1); i++)
-    {
-        cout << Line1[i];
-        Sleep(Delay_us);
-    }
-    gotoxy (X,Y+3);
-    for (unsigned int i= 0; i < sizeof(Line2); i++)
-    {
-        cout << Line2[i];
-        Sleep(Delay_us);
-    }
-    gotoxy (X,Y+4);
-    for (unsigned int i= 0; i < sizeof(Line3); i++)
-    {
-        cout << Line3[i];
-        Sleep(Delay_us);
-    }
-    gotoxy (X,Y+5);
-    for (unsigned int i= 0; i < sizeof(Line4); i++)
-    {
-        cout << Line4[i];
-        Sleep(Delay_us);
-    }
-    gotoxy (X,Y+6);
-    for (unsigned int i= 0; i < sizeof(Line5); i++)
-    {
-        cout << Line5[i];
-        Sleep(Delay_us);
-    }
-    gotoxy (X,Y+7);
-    for (unsigned int i= 0; i < sizeof(Line6); i++)
-    {
-        cout << Line6[i];
-        Sleep(Delay_us);
-    }
+
+    gotoxy(0, 2);
+    cout << Line1;
+    gotoxy(0, 3);
+    cout << Line2;
+    gotoxy(0, 4);
+    cout << Line3;
+    gotoxy(0, 5);
+    cout << Line4;
+    gotoxy(0, 6);
+    cout << Line5;
+    gotoxy(0, 7);
+    cout << Line6;
 
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Def);
 }
 
-/********************************************************************
-* [LNG 2023-06-11] - Function:  Wait_Option                         *
-* Input Arguments:                                                  *
-*                                                                   *
-* Output Arguments:                                                 *
-*- Integer value related with a option menu.                        *
-* This function wait until the user enter a option.                 *
-********************************************************************/
-// Display the list of options
+// Displays the Windows activation options
 void Show_Options() {
     gotoxy(5, 14);
     cout << "(1) Windows 10 Home";
@@ -150,148 +101,158 @@ void Show_Options() {
     gotoxy(5, 26);
     cout << "(7) Windows 10 Enterprise";
 
-     gotoxy(5, 28);
+    gotoxy(5, 28);
     cout << "(8) Windows 10 Enterprise N";
 
-     gotoxy(5, 30);
+    gotoxy(5, 30);
     cout << "(9) Windows 10 Education";
 
-     gotoxy(5, 32);
+    gotoxy(5, 32);
     cout << "(10) Windows 10 Education N";
 
-     gotoxy(5, 34);
+    gotoxy(5, 34);
     cout << "(11) Windows 10 Enterprise 2015 LTSB";
 
-     gotoxy(5, 36);
+    gotoxy(5, 36);
     cout << "(12) Windows 10 Enterprise 2015 LTSB N";
 
     gotoxy(5, 38);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Green);
-    cout << "(0) EXIT." << endl;
+    cout << "(0) EXIT.";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Def);
 
     gotoxy(17, 40);
-    cout << "Use Key Pad To Select One Or Press ESC To EXIT." << endl;
+    cout << "Use Key Pad To Select One Or Press ESC To EXIT.";
 }
 
-// Display the title and options on the screen
+// Displays the full menu
 void Show_Menu() {
     gotoxy(30, 10);
     cout << "SELECT AN OPTION.";
     Show_Options();
 }
 
-
-// Highlight the current option
+// Highlights the current option
 void Highlight_Option(int Cursor_Pos) {
     gotoxy(3, Cursor_Pos);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Green);
     cout << (char)Cursor;
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Def);
-    gotoxy(64, 30);  // Reset cursor to input area
-}
-// Highlight the current selected option
-void Display_Cursor(int Cursor_Pos) {
-    Highlight_Option(Cursor_Pos);  // Highlight new position
 }
 
-// Clear the cursor from its previous position only
+// Clears the highlight from the previous position
 void Clear_Highlight(int Prev_Cursor_Pos) {
-    gotoxy(3, Prev_Cursor_Pos); // Move to the previous cursor position
-    cout << " ";  // Replace the cursor with a blank space
+    gotoxy(3, Prev_Cursor_Pos);
+    cout << " ";
 }
 
-
-
-// Handle input and update cursor position or return selected option
-int Handle_Input(int &Cursor_Pos, int &Prev_Cursor_Pos) {
+// Handles arrow navigation and selection
+int Handle_Input(int &Cursor_Pos, int &Prev_Cursor_Pos, int Max_Cursor_Pos) {
     if (kbhit()) {
         int KEY_PAD = getch();
-        Prev_Cursor_Pos = Cursor_Pos;  // Store the previous position
+        Prev_Cursor_Pos = Cursor_Pos;
 
         switch (KEY_PAD) {
             case KEY_UP:
-                if (Cursor_Pos >= 16) Cursor_Pos -= 2;
+                if (Cursor_Pos > 14) Cursor_Pos -= 2;
                 break;
 
             case KEY_DOWN:
-                if (Cursor_Pos <= 36) Cursor_Pos += 2;
+                if (Cursor_Pos < Max_Cursor_Pos) Cursor_Pos += 2;
                 break;
 
             case KEY_ENTER:
                 return (Cursor_Pos - 14) / 2 + 1;
 
             case KEY_ESC:
-                return 8;
+                return 0; // Exit option
 
             default:
-                return -1;  // No action needed for other keys
+                return -1; // Invalid input
         }
 
-        Clear_Highlight(Prev_Cursor_Pos);  // Clear cursor from the old position
-        Display_Cursor(Cursor_Pos);  // Move to the new position
+        Clear_Highlight(Prev_Cursor_Pos); // Clear cursor from old position
+        Highlight_Option(Cursor_Pos);    // Highlight the new position
     }
-
-    return -1;  // No valid input yet
+    return -1; // No valid input yet
 }
+
+// Waits for user to select a Windows activation method
 int Wait_Option(void) {
     int Cursor_Pos = 14;
-    int Prev_Cursor_Pos = Cursor_Pos; // Track the previous position
+    int Prev_Cursor_Pos = Cursor_Pos;
 
     system("cls");
     Show_Title();
     Show_Menu();
-    Display_Cursor(Cursor_Pos);
+    Highlight_Option(Cursor_Pos);
 
     int option;
     do {
-        option = Handle_Input(Cursor_Pos, Prev_Cursor_Pos);
+        option = Handle_Input(Cursor_Pos, Prev_Cursor_Pos, 38);
         if (option != -1) {
             return option;
         }
     } while (true);
 
-    return 8; // In case the loop exits (although it should return earlier)
+    return 0; // Exit
 }
 
-/********************************************************************
-* [LNG 2023-06-11] -  Function:  New_Product                        *
-* Input Arguments:                                                  *
-*                                                                   *
-* Output Arguments:                                                 *
-*- Integer value only for indicate that the function is over.       *
-* This function adds products to the inventory.                     *
-********************************************************************/
-
-void activation_Via_KMS(string key, string comand_kms, string ato)
-{
+// Activates Windows via KMS server
+void activation_Via_KMS(string key, string comand_kms, string ato) {
     system("cls");
     system(key.c_str());
-    cout<<key;
+    cout << key;
     system(comand_kms.c_str());
-    cout<<comand_kms;
+    cout << comand_kms;
     system(ato.c_str());
-    cout<<ato;
-    cout<<"windows system key succesfully activated, check out system for veryfying.Press any key to continue";
+    cout << ato;
+    cout << "Windows system key successfully activated. Check the system to verify. Press any key to continue.";
     system("pause");
 
     system("cls");
 }
 
-int getActivationServerOption() {
-    int activation_Server_Option;
+// Waits for user to select an activation server
+int getActivationServerOption(void) {
+    const char *serverOptions[] = {
+        "kms.digiboy.ir",
+        "kms.msguides.com"
+    };
+
+    int Cursor_Pos = 14;
+    int Prev_Cursor_Pos = Cursor_Pos;
+
+
     system("cls");
-    cout << "Please select an activation server: " << endl;
-    cout << "----------------------------------------" << endl;
-    cout << "1) kms.digiboy.ir" << endl;
-    cout << "2) kms.msguides.com" << endl;
-    cout << "----------------------------------------" << endl;
-    cout << "Option: ";
-    cin >> activation_Server_Option;
-    return activation_Server_Option;
-    system("cls");
+    Show_Title();
+
+    for (int i = 0; i < 2; i++) {
+        gotoxy(5, 14 + 2 * i);
+        cout << "(" << i + 1 << ") " << serverOptions[i];
+    }
+
+    gotoxy(5, 18);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Green);
+    cout << "(0) EXIT.";
+
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Def);
+
+    gotoxy(17, 20);
+    cout << "Use Arrow Keys to Select or Press ESC to Exit.";
+
+    Highlight_Option(Cursor_Pos);
+
+    int option;
+    do {
+        option = Handle_Input(Cursor_Pos, Prev_Cursor_Pos, 18);
+        if (option != -1) {
+            return option;
+        }
+    } while (true);
+
+    return false; // Exit
+
 }
-
-
 
 #endif // FUNCTIONS_H_INCLUDED
