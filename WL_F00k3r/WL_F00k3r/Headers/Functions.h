@@ -54,9 +54,9 @@ void Show_Title(void) {
     system("cls");
 
     char Line1[] = {"  ----------------------------------------------------------------------------   "};
-    char Line2[] = {" |                          Wlfooker SYSTEM V.3.0                            |  "};
+    char Line2[] = {" |                          Wlfooker SYSTEM V.3.0                             |  "};
     char Line3[] = {" |                                                                            |  "};
-    char Line4[] = {" |                         grecolucas477@yahoo.com.ar                         |  "};
+    char Line4[] = {" |                      lucasnicolas.greco@gmail.com                          |  "};
     char Line5[] = {" |                                                                            |  "};
     char Line6[] = {"  ----------------------------------------------------------------------------   "};
 
@@ -127,6 +127,7 @@ void Show_Options() {
 
 // Displays the full menu
 void Show_Menu() {
+    Show_Title();
     gotoxy(30, 10);
     cout << "SELECT AN OPTION.";
     Show_Options();
@@ -183,7 +184,7 @@ int Wait_Option(void) {
     int Prev_Cursor_Pos = Cursor_Pos;
 
     system("cls");
-    Show_Title();
+
     Show_Menu();
     Highlight_Option(Cursor_Pos);
 
@@ -234,8 +235,7 @@ int getActivationServerOption(void) {
 
     gotoxy(5, 18);
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Green);
-    cout << "(0) EXIT.";
-
+    cout << "(3) GO BACK TO THE MAIN MENU";
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color_Def);
 
     gotoxy(17, 20);
@@ -251,8 +251,7 @@ int getActivationServerOption(void) {
         }
     } while (true);
 
-    return false; // Exit
-
+    return 0; // Exit
 }
 
 #endif // FUNCTIONS_H_INCLUDED

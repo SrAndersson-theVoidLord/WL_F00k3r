@@ -1,7 +1,7 @@
 /********************************************************************
-*   [LNG 2023-06-11] -    INVENTORY SYSTEM 3.0                      *
-*    This program is a Inventory System with Output/Input Files.    *
-*                           Version 1.0                             *
+*   [LNG 2023-06-11] -    WINDOWS ACTIVATION SYSTEM 3.0             *
+*    This program is a Fuck you to microsoft and bill gates         *
+*                           Version 3.0                             *
 *      Lucas Nicolas Greco (lucasnicolas.greco@gmail.com)           *
 *                                                                   *
 ********************************************************************/
@@ -14,16 +14,13 @@
 #include <iomanip>
 #include <fstream>
 
-
 using namespace std;
 
 #include "Headers/Functions.h"
 
-
-
-
 int main()
 {
+ system("mode 650");/// lo setea a la maxima resolucion posible
  string key = "0";
  string terminal_comand_skms = "0";
  string terminal_comand_ato = "slmgr /ato";
@@ -55,7 +52,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return EXIT_SUCCESS;
+                            continue;
                             break;
 
                             }
@@ -80,7 +77,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;
 
                             }
@@ -104,7 +101,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;
 
                             }
@@ -129,7 +126,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
             break;
@@ -151,7 +148,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
             break;
@@ -173,7 +170,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
             break;
 
@@ -194,7 +191,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
             break;
 
@@ -215,7 +212,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
 
@@ -238,7 +235,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
             break;
 
@@ -259,7 +256,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
 
@@ -282,7 +279,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
 
@@ -307,7 +304,7 @@ int main()
                              activation_Via_KMS(key,terminal_comand_skms,terminal_comand_ato);
                         break;
                         case 3:
-                            return 0;
+                            continue;
                             break;}
 
             break;
