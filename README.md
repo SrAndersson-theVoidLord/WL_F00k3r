@@ -1,6 +1,31 @@
-# Title of the Software Idea/ Web application.
+# WL_F00ker — Windows License Fooker (KMS Activation Tool)
 
-small description of what it does.
+             $$$$$$
+            $$    $$
+            $$$  $$$
+            $$ $$ $$
+            $$    $$
+            $$    $$
+            $$    $$
+            $$    $$$$$$$
+      $$$$$$$$    $$    $$
+     $$$$$   $$    $$    $$$$$$
+    $$$ $$   $$    $$    $$   $$
+    $$  $$   $$    $$    $$   $$
+    $$  $$   $$    $$    $$   $$
+    $$  $$   $$    $$   $$$   $$
+    $$  $$   $$    $$    $    $$
+    $$    $$$  $$$$  $$$$   $ $$
+    $$                        $$
+     $$                       $$
+      $$$                     $$
+       $$$$                 $$$
+         $$                 $
+         $$$               $$
+
+         FUCK YOU BILL GATES
+       
+A lightweight Windows activation utility that leverages the KMS (Key Management Service) method to activate supported Windows versions seamlessly and efficiently.
 
 
 
@@ -17,44 +42,67 @@ small description of what it does.
 - [**License**](#license)
 
 ## Introduction
-small intro
+
+WL_F00ker is a simple yet effective software solution designed to automate the Windows activation process via KMS (Key Management Service). No more hassle with manual keys or activation errors — just run, activate, and go!
+
 
 ## Features
-what the software does
+Activates Windows operating systems via KMS emulation.
+
+Supports Windows 7, 8, 8.1, 10, and Server editions.
+
+Clean and minimal CLI interface.
+
+Lightweight and fast.
+
+Logs activation status and attempts for user review.
+
+Can be integrated into scripts for automated deployments.
+
+
 
 ## Technologies Used: 
 
-Add the technologies you used to build the project/software/web-page, etc.
-Examples:
-- **C/C++.**
-- **P.O.O.**
-- **Binary Database.**
+🖥️ C/C++
 
-Note: you can also add icons to represent each technology from the STACK.
+🧠 Object-Oriented Programming (P.O.O.)
+
+💾 Binary Database
+
+⚙️ Windows API
+
 
 #### Requirements:
-All the extra things not included in the repo, required to run/compile the program, or the necesary libraries.
+Before running WL_Fooker, ensure your system meets the following requirements:
 
-Examples:
+-   Windows 7 / 8 / 8.1 / 10 / Server editions.
 
--   GNU/GCC compiler(C++).
--   Eclipse IDE(Java).
--   Node.js (Javascript package).
+-   Admin privileges (required for activation routines).
+
+-   Internet connection (optional, for genuine KMS server mode).
+
+## Development requirements:
+
+-   GNU/GCC Compiler (if compiling from source).
+
+-   Windows SDK (for Windows-specific builds).
+
+-   A text editor or IDE (e.g., Visual Studio Code, Eclipse CDT).
+
+
+Supported Operating Systems:
+
 
 ## How to Use/Installation:
+
+Supported Operating Systems:
 
  | S.O.  | Version |
  | ----- | --- |
  | Windows  | [**7,8,vista,10**](#windows)  |
- | Linux |  [**Debian**](#debian), [**Gentoo**](#gentoo),  |
 
-small set of instuctions
 
-```bash
-#!/bin/bash
 
-echo "Hello, World!"
-```
 -   ## Windows
 Basically Download the zip file, or clone the repository via the git bash promt.
 1) Clone the repository:
@@ -62,82 +110,35 @@ Basically Download the zip file, or clone the repository via the git bash promt.
 bash
 ```bash
 #!/bin/bash
-git clone https://github.com/username/repositoryname.git
-cd repositoryname
+git clone https://github.com/username/WL_Fooker.git
+cd WL_Fooker
 
 ```
 2) Compile the Program:
 
 bash
 ```bash
-Copy code
-g++ repositoryname.cpp -o repositoryname
+g++ WL_Fooker.cpp -o WL_Fooker.exe
 ```
 
 3) Run the Program:
 
--   Execute the .exe file from the "bin" folder (after compiling it from the source code, of course...).
-
--   ## Debian
-1) Clone the repository:
-
-bash
+-   Execute the .exe file from the "bin" folder (after compiling it from the source code, of course...) or just run it from the command prompt.
 ```bash
-#!/bin/bash
-git clone https://github.com/username/repositoryname.git
-cd repositoryname
-
-```
-2) Compile the Program:
-
-bash
-```bash
-Copy code
-g++ repositoryname.cpp -o repositoryname
-```
-
-3) Run the Program:
-
-bash
-Copy code
-```bash
-./repositoryname
-Enter Password Length:
-```
-
--   ## Gentoo
-1) Clone the repository:
-
-bash
-```bash
-#!/bin/bash
-git clone https://github.com/username/repositoryname.git
-cd repositoryname
-
-```
-2) Compile the Program:
-
-bash
-```bash
-Copy code
-g++ repositoryname.cpp -o repositoryname
-```
-
-3) Run the Program:
-
-bash
-Copy code
-```bash
-./repositoryname
-Enter Password Length:
+cd bin
+./WL_Fooker.exe
 ```
 
 
 ## How It Works
-small technical explanation of what it does 
+WL_F00ker emulates the behavior of an internal Key Management Service server, generating valid responses to Windows activation requests. The tool communicates with the Windows Software Protection Platform via the slmgr utility or native API calls, tricking the system into accepting the activation as genuine. This enables seamless unlocking of Windows features without requiring a retail product key.
 
 ## Note
- any other detail
+ - This tool is intended for educational purposes and system administrators testing deployment setups.
+
+- Misuse of this software may violate the Microsoft EULA.
+
+- Always ensure compliance with licensing policies when using any activation tool.
 
 ## Contributing
 
@@ -148,16 +149,5 @@ If you'd like to contribute to the project, feel free to fork the repository, ma
 -   Make your changes and commit them.
 -   Submit a pull request.
 
-## License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code.
-
-The MIT License (MIT)
-Copyright © 2023 <copyright holders>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
