@@ -14,3 +14,18 @@
 	<windows.h>
 	<conio.h>
 
+1745289074 source:c:\users\usuario\documents\github\wl_f00ker\main.cpp
+	<iostream>
+	<windows.h>
+	<time.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<fstream>
+	"Headers/Functions.h"
+
+1745289189 c:\users\usuario\documents\github\wl_f00ker\headers\functions.h
+	<iostream>
+	<windows.h>
+	<conio.h>
+
